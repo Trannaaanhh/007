@@ -1,5 +1,4 @@
-package TCP; // Hoặc tên package của bạn trong NetBeans
-
+package TCP; 
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -15,15 +14,14 @@ class Laptop implements Serializable {
         return "Laptop{" + "id=" + id + ", code=" + code + ", name=" + name + ", quantity=" + quantity + '}';
     }
 }
-// Lớp public chính, tên file phải là TCPClientObject.java
 public class TCPClientObject {
     public static void main(String[] args) throws Exception {
         String serverIP = "203.162.10.109";
         int serverPort = 2209;
         
-        String studentCode = "B22DCVT034"; // Ví dụ MSV
+        String studentCode = "B22DCVT034";
         String qCode = "zZIYrrw0";
-        int timeout = 5000; // 5 giây
+        int timeout = 5000;
 
         try (Socket socket = new Socket()) {
             
@@ -72,4 +70,5 @@ public class TCPClientObject {
             // 4. Đóng socket (tự động nhờ try-with-resources)
         }
     }
+
 }
